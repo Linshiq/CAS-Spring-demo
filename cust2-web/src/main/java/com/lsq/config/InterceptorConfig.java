@@ -1,6 +1,6 @@
-package com.lsq.lsqweb.config.config;
+package com.lsq.config;
 
-import com.lsq.lsqweb.config.config.entity.LogcostInterceptor;
+import com.lsq.config.entity.LogcostInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;

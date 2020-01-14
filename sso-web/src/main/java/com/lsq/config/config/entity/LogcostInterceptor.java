@@ -1,4 +1,4 @@
-package com.lsq.lsqweb.config.config.entity;
+package com.lsq.config.config.entity;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

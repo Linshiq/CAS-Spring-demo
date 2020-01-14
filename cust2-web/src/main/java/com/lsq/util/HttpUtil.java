@@ -1,4 +1,4 @@
-package com.lsq.lsqweb.util;
+package com.lsq.util;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;

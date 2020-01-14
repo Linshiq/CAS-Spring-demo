@@ -1,6 +1,6 @@
-package com.lsq.lsqweb.config.entity;
+package com.lsq.config.entity;
 
-import com.lsq.lsqweb.util.HttpUtil;
+import com.lsq.util.HttpUtil;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

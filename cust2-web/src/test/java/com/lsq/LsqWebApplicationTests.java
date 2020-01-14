@@ -1,4 +1,4 @@
-package com.lsq.lsqweb;
+package com.lsq;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
