@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="528d3e33-aaa1-4399-8ebd-b8b834b2d5e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CAS-Spring-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/src/main/java/com/lsq/lsqweb/LsqWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust1-web/src/test/java/com/lsq/lsqweb/LsqWebApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/src/main/java/com/lsq/lsqweb/LsqWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cust2-web/src/test/java/com/lsq/lsqweb/LsqWebApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsq-demo-1.0.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lsq-web.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/src/main/java/com/lsq/lsqweb/LsqWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sso-web/src/test/java/com/lsq/lsqweb/LsqWebApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\apache\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WNMa7GKHaOdAVZ3ZWgaJv2XIQ5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="CAS-Spring-demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="CAS-Spring-demo" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="528d3e33-aaa1-4399-8ebd-b8b834b2d5e1" name="Default Changelist" comment="" />
+      <created>1578985659518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578985659518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="452" y="96" key="#Project_Structure" timestamp="1578986084644">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="96" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1578986084644" />
+    <state x="690" y="218" key="FileChooserDialogImpl" timestamp="1578986072442">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="218" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1578986072442" />
+    <state x="345" y="78" key="SettingsEditor" timestamp="1578986075920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="345" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578986075920" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1578985959583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578985959583" />
+  </component>
+</project>
