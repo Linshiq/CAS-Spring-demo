@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> 
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>LinShiQ</title>
+<link rel="stylesheet" type="text/css" th:href="@{/style/css/bootstrap.min.css}" />
+<link th:href="@{/style/backstage/css/bootstrap.min.css}" rel="stylesheet"/>
+<link th:href="@{/style/backstage/css/datepicker3.css}" rel="stylesheet"/>
+<link th:href="@{/style/backstage/css/styles.css}" rel="stylesheet"/>
+<link rel="stylesheet" media="screen" th:href="@{/style/plug/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css}" />
+</head>
+<body>
+		
+	<!-- 引入头文件 -->
+	<header th:replace="backstage/include/top :: header"></header>
+	
+	<!-- 引入菜单 -->
+	<div th:replace="backstage/include/menu :: menu"></div>
+		
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+				<h2 class="sub-header">报表</h2>
+				<div class="">
+					<div id="container" style="min-width:400px;min-height:800px;"></div>
+				</div> 
+
+	</div>
+			
+	<!-- <h1 th:inline="text" id="data11" name="data11">[[${data}]]</h1> -->
+	<script th:src="@{/style/backstage/js/jquery-1.11.1.min.js}"></script>
+	<script th:src="@{/style/backstage/js/bootstrap.min.js}"></script>
+	<script th:src="@{/style/backstage/js/chart.min.js}"></script>
+	<script th:src="@{/style/backstage/js/chart-data.js}"></script>
+	<script th:src="@{/style/backstage/js/easypiechart.js}"></script>
+	<script th:src="@{/style/backstage/js/easypiechart-data.js}"></script>
+	<script th:src="@{/style/backstage/js/bootstrap-datepicker.js}"></script>
+	<script th:inline="javascript">
+	/*<![CDATA[*/
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+		/*]]>*/		
+	</script >
+	<!-- <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script> -->
+	<!-- <script type="text/javascript" th:src="@{/style/Highcharts-5.0.12/code/highcharts.js}"></script>
+	<script type="text/javascript" th:src="@{/style/Highcharts-5.0.12/code/modules/exporting.js}"></script>
+	<script type="text/javascript" th:src="@{/style/css/Highcharts-4.2.6/js/highcharts-3d.js}"></script> -->
+	<script type="text/javascript" th:src="@{/style/js/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/style/css/Highcharts-4.2.6/js/highcharts.js}"></script>
+	<script type="text/javascript" th:src="@{/style/css/Highcharts-4.2.6/js/highcharts-3d.js}"></script>
+	<script th:inline="javascript" >
+	/*<![CDATA[*/
+	
+	var e =  [[${data}]]; 
+	
+
+	e = eval('(' + e + ')');
+	
+	console.log(e);
+	var data = [];
+	data[0]=e;
+	/* var d = [{	对象化	   
+	    name:'林sb',
+	    data:[1,2]	    
+   }];
+	console.log(d[0]); */
+	/* e = eval('(' + data1 + ')');
+	var data = JSON.stringify(e.data);
+	var newe = [];
+	newe['name']=e.name;newe['data']=data;
+	var a = JSON.stringify(newe);
+	console.log(a); */
+	
+	var xData = [[${xData}]]; 
+	x = eval('(' + xData + ')');
+	console.log(x.data);
+	
+	var chart = new Highcharts.Chart('container', {
+		chart:{
+    		type:'line' ,          //bar为柱型
+    		events: {
+                selection: function (event) {//拖动放大
+                    var text,
+                        label;
+                    if (event.xAxis) {
+                        text = 'min: ' + Highcharts.numberFormat(event.xAxis[0].min, 2) + ', max: ' + Highcharts.numberFormat(event.xAxis[0].max, 2);
+                    } else {
+                        text = 'Selection reset';
+                    }
+                    label = this.renderer.label(text, 100, 120)
+                        .attr({
+                        fill: Highcharts.getOptions().colors[0],
+                        padding: 10,
+                        r: 5,
+                        zIndex: 8
+                    })
+                        .css({
+                        color: '#FFFFFF'
+                    })
+                        .add();
+                    setTimeout(function () {
+                        label.fadeOut();
+                    }, 1000);
+                }
+            },
+            zoomType: 'x'
+    	},  
+    	tooltip: {                 
+            valuePrefix: '￥', 			 
+            valueSuffix: '元',
+            shared: true				
+        },
+        legend: {
+            layout: 'vertical',
+            backgroundColor: '#FFFFFF',
+            floating: true,
+            align: 'left',
+            verticalAlign: 'top',
+            x: 90,
+            y: 90,
+        },
+		title: {
+	        text: '余额折线图',
+	        x: -20
+	    },
+	    subtitle: {
+	        text: '数据来源: Linshiq',
+	        x: -20
+	    },
+	    xAxis: {
+	    	title: {
+	            text: [[${xTitle}]]
+	        },
+	        categories: x.data ,
+	    	
+	    },
+	    yAxis: {
+	        title: {
+	            text: [[${yTitle}]]
+	        },
+	        categories: [[${yData}]] ,
+	        plotLines: [{
+	            value: 0,
+	            width: 1,
+	            color: '#808080'
+	        }]
+	    },
+	
+	   //series: [{
+		   
+		    //name:'林sb',
+		   // data:[1,2]
+		    
+	   //}]
+	    series:data
+	
+	});
+
+	/*]]>*/	
+   </script> 
+</body>
+</html>

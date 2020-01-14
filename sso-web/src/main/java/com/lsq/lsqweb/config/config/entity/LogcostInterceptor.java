@@ -1,42 +1,17 @@
-package com.lsq.lsqweb.config.entity;
+package com.lsq.lsqweb.config.config.entity;
 
-import com.lsq.lsqweb.util.HttpUtil;
-import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
 
 public class LogcostInterceptor implements HandlerInterceptor {
     long start = System.currentTimeMillis();
     //preHandle是在请求执行前执行的
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        start = System.currentTimeMillis();
-        System.out.println("被拦截了");
-
-        HttpSession session = request.getSession();
-        if (session != null && "login".equals(session.getAttribute("login"))){
-            return true;
-        }
-
-        // 检查token
-        String token = request.getParameter("token");
-        System.out.println(token);
-        if (!StringUtils.isEmpty(token)){
-            String reqUrl = "http://127.0.0.1:8090/sso/checkToken";
-            String content = "token=" + token;
-            Map<String, String> paramMap = new HashMap<>();
-            paramMap.put("token",token);
-            String result = HttpUtil.doPost(reqUrl,paramMap);
-            System.out.println("调用结果为:"+result);
-        }
-
-        response.sendRedirect("http://127.0.0.1:8090/sso/login");
-        return false;
+        return true;
         //返回true,postHandler和afterCompletion方法才能执行
         // 否则false为拒绝执行，起到拦截器控制作用
     }
