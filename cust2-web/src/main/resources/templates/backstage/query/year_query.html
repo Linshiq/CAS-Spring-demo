@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> 
+<head>
+<meta charset="UTF-8" />
+<title>LinShiQ</title>
+<link rel="stylesheet" type="text/css" th:href="@{/style/css/bootstrap.min.css}" />
+<link th:href="@{/style/backstage/css/bootstrap.min.css}" rel="stylesheet"/>
+<link th:href="@{/style/backstage/css/datepicker3.css}" rel="stylesheet"/>
+<link th:href="@{/style/backstage/css/styles.css}" rel="stylesheet"/>
+<link rel="stylesheet" media="screen" th:href="@{/style/plug/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css}" />
+</head>
+<body>
+		
+	<!-- 引入头文件 -->
+	<header th:replace="backstage/include/top :: header"></header>
+	
+	<!-- 引入菜单 -->
+	<div th:replace="backstage/include/menu :: menu"></div>
+		
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+				<h2 class="sub-header">年消费查询</h2>
+				<form class="form-inline" action="/return" th:action="@{/back/year_query/query}"  method = "post">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"/>
+				  </div>
+				   <div class="form-group">
+				    <label for="exampleInputEmail2">消费类型</label>
+				    <select class="form-control" id="consumptionType" name="consumptionType">
+				     <option th:each="collect,iterStat : ${consumptionType}" th:text="${collect}">1</option>
+				    </select>			    
+				  </div>
+				 <div class="form-group">
+				    <label for="exampleInputEmail2">日期</label>
+				    <input type="text" class="form-control" id="year" name="year" placeholder="例如:2017"/>			    
+				  </div>
+				
+		    	  <button type="submit" class="btn btn-primary">搜索</button>
+				</form>
+				<h2 class="sub-header">合计:</h2>
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+							<tr>		
+								<th>日期</th>
+								<th>总支出</th>
+								<th>总收入</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td th:text="${date}">#####</td>
+								<td th:text="${allExpenditure}">${dayXF.time}</td>
+								<td th:text="${allIncome}">${dayXF.consumptionType}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h2 class="sub-header">当年消费如下</h2>
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+							<tr>		
+								<th>日期</th>
+								<th>消费时间</th>
+								<th>消费类型</th>
+								<th>消费描述</th>
+								<th>支出</th>
+								<th>收入</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="collect,iterStat : ${consumerDetl}">
+								<td th:text="${collect.date}">#####</td>
+								<td th:text="${collect.time}">${dayXF.time}</td>
+								<td th:text="${collect.consumptionType}">${dayXF.consumptionType}</td>
+								<td th:text="${collect.consumptionRemark}">${dayXF.consumptionType}</td>
+								<td th:text="${collect.expenditure}">${dayXF.expenditure}</td>
+								<td th:text="${collect.income}">${dayXF.income}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+	<script th:src="@{/style/backstage/js/jquery-1.11.1.min.js}"></script>
+	<script th:src="@{/style/backstage/js/bootstrap.min.js}"></script>
+	<script th:src="@{/style/backstage/js/chart.min.js}"></script>
+	<script th:src="@{/style/backstage/js/chart-data.js}"></script>
+	<script th:src="@{/style/backstage/js/easypiechart.js}"></script>
+	<script th:src="@{/style/backstage/js/easypiechart-data.js}"></script>
+	<script th:src="@{/style/backstage/js/bootstrap-datepicker.js}"></script>
+</body>
+</html>

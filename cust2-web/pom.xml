@@ -10,7 +10,7 @@
 	<groupId>com.lsq</groupId>
 	<artifactId>cust2-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cust1-web</name>
+	<name>cust2-web</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -27,6 +27,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
 

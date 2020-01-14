@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+	
+	<footer th:fragment="menu"> 
+	
+ 		<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+			<form role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search"/>
+				</div>
+			</form>
+		<ul class="nav menu">
+			
+			
+			<li th:if="${index=='yes'}"  class="active"> <a th:href="@{/back}" ><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li> 
+			<li th:if="${null ==index || index=='no'}" > <a th:href="@{/back}" ><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li> 
+			
+			<li th:if="${widgets=='yes'}"  class="active"> <a th:href="@{/back/widgets}"><span class="glyphicon glyphicon-th"></span> Widgets</a></li> 
+			<li th:if="${null ==widgets || widgets=='no'}" > <a th:href="@{/back/widgets}"><span class="glyphicon glyphicon-th"></span> Widgets</a></li> 
+				
+			<li th:if="${charts=='yes'}"  class="active"> <a th:href="@{/back/charts}"><span class="glyphicon glyphicon-stats"></span> Charts</a></li> 
+			<li th:if="${null ==charts || charts=='no'}" > <a th:href="@{/back/charts}"><span class="glyphicon glyphicon-stats"></span> Charts</a></li> 
+				
+			<li><a href="tables.html"><span class="glyphicon glyphicon-list-alt"></span> Tables</a></li>
+			<li><a href="forms.html"><span class="glyphicon glyphicon-pencil"></span> Forms</a></li>			
+			<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li>
+			
+			<li th:if="${balance=='yes'}" class="active"><a th:href="@{/balance}"><span class="glyphicon glyphicon-usd"></span> 余额曲线</a></li>
+			<li th:if="${null ==balance || balance=='no'}"><a th:href="@{/balance}"><span class="glyphicon glyphicon-usd"></span> 余额曲线</a></li>
+			
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> 查询相关 <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" th:href="@{/back/day_query}">
+							<span class="glyphicon glyphicon-share-alt"></span> 日消费查询
+						</a>
+					</li>
+					<li>
+						<a class="" th:href="@{/back/month_query}">
+							<span class="glyphicon glyphicon-share-alt"></span> 月消费查询
+						</a>
+					</li>
+					<li>
+						<a class="" th:href="@{/back/year_query}">
+							<span class="glyphicon glyphicon-share-alt"></span> 年消费查询
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
+		</ul>
+		<div class="attribution">More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>
+		</div><!--/.sidebar-->
+	
+	</footer>
+
+</body>
+</html>

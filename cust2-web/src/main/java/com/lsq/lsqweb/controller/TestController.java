@@ -14,11 +14,10 @@ public class TestController {
 	private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	@ResponseBody
 	public String test() throws Exception {
 		
 		logger.info("测试");
 		
-		return "测试";
+		return "/index";
 	}
 }
